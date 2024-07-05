@@ -58,7 +58,7 @@ Segmentation-Denoising-UNet/
 └── scripts/
     ├── download_data.sh
     └── download_data.py
-
+```
 ## Setup
 
 ### Prerequisites
@@ -74,7 +74,7 @@ First, clone the repository to your local machine:
 ```sh
 git clone https://github.com/yourusername/Segmentation-Denoising-UNet.git
 cd Segmentation-Denoising-UNet
-
+```
 ## Downloading the Data
 
 To keep the repository lightweight, the data is not included. You can download the data by running the provided script.
@@ -83,3 +83,68 @@ To keep the repository lightweight, the data is not included. You can download t
 chmod +x scripts/download_data.sh
 ./scripts/download_data.sh
 
+```
+
+## Installing Dependencies
+
+Install the required Python packages:
+
+```sh
+pip install -r requirements.txt
+```
+
+## Running the Notebook
+After downloading the data, you can start the Jupyter notebook:
+
+
+
+```sh
+jupyter notebook notebooks/Segmentation_Denoising_UNet.ipynb
+```
+
+## Project Details
+
+### Data Preparation
+The data preparation steps involve organizing and preprocessing the dataset for training and testing. This is handled in the data_preparation.py script in the src/ folder.
+
+- Script: data_preparation.py
+
+## Data Exploration
+In this step, we explore the dataset to understand its structure and visualize some examples. This is done in the data_exploration.py script.
+
+-Script: data_exploration.py
+
+## Implement PyTorch Dataset
+We implement a custom PyTorch dataset to handle data loading and preprocessing. This implementation can be found in the dataset.py script.
+
+-Script: dataset.py
+
+## Implement the U-Net
+We implement the U-Net architecture as described in Ronneberger et al. The code for this is in the unet_model.py script.
+
+-Script: unet_model.py
+
+## Training
+We define the training functions and train the model, plotting the results of loss and metrics. The training code is in the training.py script.
+
+-Script: training.py
+
+## Evaluation
+We evaluate the model on the test data to assess its performance. This evaluation is done in the evaluation.py script.
+
+-Script: evaluation.py
+
+## Training with Boundary Channel
+To avoid merges of touching nuclei, we add a boundary channel to the learning objective and retrain the model. This process is handled in the train_with_boundary.py script.
+
+-Script: train_with_boundary.py
+
+## Results
+The results of the segmentation and denoising tasks will be stored in the results/ directory, including logs, models, and figures.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+-Ronneberger, O., Fischer, P., & Brox, T. (2015). U-net: Convolutional networks for biomedical image segmentation. In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
+-Kaggle for providing the dataset.
