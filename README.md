@@ -58,3 +58,28 @@ Segmentation-Denoising-UNet/
 └── scripts/
     ├── download_data.sh
     └── download_data.py
+
+## Setup
+
+### Prerequisites
+
+- Python 3.7+
+- Jupyter Notebook
+- Git
+
+### Cloning the Repository
+
+First, clone the repository to your local machine:
+
+```sh
+git clone https://github.com/yourusername/Segmentation-Denoising-UNet.git
+cd Segmentation-Denoising-UNet
+
+## Downloading the Data
+
+To keep the repository lightweight, the data is not included. You can download the data by running the provided script.
+
+```sh
+chmod +x scripts/download_data.sh
+./scripts/download_data.sh
+
