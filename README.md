@@ -1,6 +1,13 @@
 # Segmentation & Denoising with U-Net
 
-The goal of the first part of the exercise (segmentation) is to implement the U-Net architecture very similar to the original publication and then use it for its initial purpose, semantic segmentation.
+The goal of the first part of the exercise (segmentation) is to implement the U-Net architecture very similar to the original publication and then use it for its initial purpose, semantic segmentation. In the second part we will use the same U-Net implementation, but use it for a different task: denoising, following the ideas of noise-to-noise.
+
+To understand the background of this exercise you can:
+
+Read the U-net publication: https://arxiv.org/abs/1505.04597
+Read the noise-to-noise publication: https://arxiv.org/abs/1803.04189
+
+Note that we will implement the same ideas as in these papers, but will deviate from the implementation details and conduct different and fewer experiments.
 
 ## Table of Contents
 
