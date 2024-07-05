@@ -1,5 +1,5 @@
 # download the data
-data_folder = os.path.join(root_folder, "kaggle-data")
+data_folder = "data"
 url = "https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip"
 if not os.path.exists(data_folder):
     os.makedirs(data_folder)
