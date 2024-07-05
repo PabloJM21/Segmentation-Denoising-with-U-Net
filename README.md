@@ -56,12 +56,7 @@ Segmentation-Denoising-UNet/
 │   ├── dsb2018/
 │       ├── train/
 │       ├── test/
-├── results/
-│   ├── logs/
-│   ├── models/
-│   ├── figures/
 └── scripts/
-    ├── download_data.sh
     └── download_data.py
 ```
 ## Setup
