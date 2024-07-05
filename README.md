@@ -20,7 +20,6 @@ Note that we will implement the same ideas as in these papers, but will deviate 
   - [Installing Dependencies](#installing-dependencies)
 - [Running the Notebook](#running-the-notebook)
 - [Project Details](#project-details)
-  - [Data Preparation](#data-preparation)
   - [Data Exploration](#data-exploration)
   - [Implement PyTorch Dataset](#implement-pytorch-dataset)
   - [Implement the U-Net](#implement-the-u-net)
@@ -47,7 +46,6 @@ Segmentation-Denoising-UNet/
 │   └── Segmentation_Denoising_UNet.ipynb
 ├── src/
 │   ├── __init__.py
-│   ├── data_preparation.py
 │   ├── data_exploration.py
 │   ├── dataset.py
 │   ├── unet_model.py
@@ -111,10 +109,6 @@ jupyter notebook notebooks/Segmentation_Denoising_UNet.ipynb
 
 ## Project Details
 
-### Data Preparation
-The data preparation steps involve organizing and preprocessing the dataset for training and testing. This is handled in the data_preparation.py script in the src/ folder.
-
-- Script: data_preparation.py
 
 ## Data Exploration
 In this step, we explore the dataset to understand its structure and visualize some examples. This is done in the data_exploration.py script.
