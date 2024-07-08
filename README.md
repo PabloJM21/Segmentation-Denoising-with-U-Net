@@ -39,7 +39,6 @@ In this project, we will implement the U-Net architecture for two main tasks: se
 Segmentation-Denoising-UNet/
 │
 ├── README.md
-├── LICENSE
 ├── .gitignore
 ├── notebooks/
 │   └── Segmentation_Denoising_UNet.ipynb
@@ -107,7 +106,7 @@ jupyter notebook notebooks/Segmentation_UNet.ipynb
 ## Importing libraries
 First of all we import all required python libraries for completing the task.
 
--Script: import_libraries.py
+- Script: import_libraries.py
 
 ## Data Exploration
 In this step, we explore the dataset to understand its structure and visualize some examples. This is done in the data_exploration.py script.
