@@ -14,7 +14,7 @@ Note that we will implement the same ideas as in these papers, but will deviate 
 - [Project Overview](#project-overview)
 - [Directory Structure](#directory-structure)
 - [Setup](#setup)
-  - [Importing libraries](#importing_libraries)
+  - [Importing libraries](#importing-libraries)
   - [Prerequisites](#prerequisites)
   - [Cloning the Repository](#cloning-the-repository)
   - [Downloading the Data](#downloading-the-data)
