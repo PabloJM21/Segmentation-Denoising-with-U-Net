@@ -31,3 +31,38 @@ def dice_score_new(input_, target):
 
 def dice_loss(pred, target):
     return 1 - dice_score_new(pred, target)
+
+
+# We implement and compare with different loss function variations
+model = UNet(out_channels=3)
+model.to(device)
+loss = dice_loss
+n_epochs = 10
+train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True) 
+val_loader = DataLoader(val_dataset, batch_size=1, shuffle=True)
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+metric = None
+train_losses, _, val_losses, _ = run_training(model, train_loader, val_loader, loss, metric, optimizer, n_epochs)
+plot('Loss vs. Epoch', 'Loss', train_losses, val_losses)
+
+f1s = []
+model.eval()
+with torch.no_grad():
+    for im, mask in tqdm.tqdm(zip(test_images, test_masks), total=len(test_images)):
+        # 
+        if any(sh % 16 != 0 for sh in im.shape):
+            crop = tuple(
+                slice(0, -(sh%16)) for sh in im.shape
+            )
+            im = im[crop]
+            mask = mask[crop]
+        
+        input_ = torch.from_numpy(im[None, None]).to(device)
+        pred = model(input_)
+        pred = torch.softmax(pred, dim=1).cpu().numpy().squeeze()
+        assert pred.shape[0] == 3
+        nuclei = instance_segmentation(pred[1], pred[2])
+        f1s.append(f1_score(nuclei, mask, best_threshold))
+print()
+print(np.mean(f1s))
+
