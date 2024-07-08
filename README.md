@@ -1,11 +1,11 @@
-# Segmentation & Denoising with U-Net
+# Segmentation with U-Net
 
-The goal of the first part of the exercise (segmentation) is to implement the U-Net architecture very similar to the original publication and then use it for its initial purpose, semantic segmentation. In the second part we will use the same U-Net implementation, but use it for a different task: denoising, following the ideas of noise-to-noise.
+The goal of the first part of the exercise (segmentation) is to implement the U-Net architecture very similar to the original publication and then use it for its initial purpose, semantic segmentation. 
 
 To understand the background of this exercise you can:
 
 Read the U-net publication: https://arxiv.org/abs/1505.04597
-Read the noise-to-noise publication: https://arxiv.org/abs/1803.04189
+
 
 Note that we will implement the same ideas as in these papers, but will deviate from the implementation details and conduct different and fewer experiments.
 
@@ -27,7 +27,6 @@ Note that we will implement the same ideas as in these papers, but will deviate 
   - [Evaluation](#evaluation)
   - [Training with Boundary Channel](#training-with-boundary-channel)
 - [Results](#results)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ## Project Overview
@@ -52,6 +51,7 @@ Segmentation-Denoising-UNet/
 │   ├── training.py
 │   ├── evaluation.py
 │   ├── train_with_boundary.py
+│   ├── train_with_dice_loss.py
 ├── data/
 │   ├── dsb2018/
 │       ├── train/
@@ -72,8 +72,8 @@ Segmentation-Denoising-UNet/
 First, clone the repository to your local machine:
 
 ```sh
-git clone https://github.com/yourusername/Segmentation-Denoising-UNet.git
-cd Segmentation-Denoising-UNet
+git clone https://github.com/yourusername/Segmentation-UNet.git
+cd Segmentation-UNet
 ```
 ## Downloading the Data
 
@@ -99,7 +99,7 @@ After downloading the data, you can start the Jupyter notebook:
 
 
 ```sh
-jupyter notebook notebooks/Segmentation_Denoising_UNet.ipynb
+jupyter notebook notebooks/Segmentation_UNet.ipynb
 ```
 
 ## Project Details
@@ -135,11 +135,14 @@ To avoid merges of touching nuclei, we add a boundary channel to the learning ob
 
 - Script: train_with_boundary.py
 
-## Results
-The results of the segmentation and denoising tasks will be stored in the results/ directory, including logs, models, and figures.
+## Training with Boundary Channel
+For robustness against class imbalance, we will use the Dice coefficient as loss
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+- Script: train_with_dice_loss.py
+
+## Results
+The results of the segmentation task jupyter notebook will be stored in the results/ directory as a pdf.
+
 
 ## Acknowledgments
 - Ronneberger, O., Fischer, P., & Brox, T. (2015). U-net: Convolutional networks for biomedical image segmentation. In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
