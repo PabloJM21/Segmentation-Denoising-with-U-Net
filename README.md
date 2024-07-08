@@ -104,10 +104,11 @@ jupyter notebook notebooks/Segmentation_UNet.ipynb
 
 ## Project Details
 
-## Installation of libraries
-First of all we install the required python libraries for completing the task.
+## Importing libraries
+First of all we import all required python libraries for completing the task.
 
--Script: 
+-Script: import_libraries.py
+
 ## Data Exploration
 In this step, we explore the dataset to understand its structure and visualize some examples. This is done in the data_exploration.py script.
 
