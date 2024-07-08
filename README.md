@@ -105,42 +105,42 @@ jupyter notebook notebooks/Segmentation_UNet.ipynb
 
 ## Project Details
 
-## Importing libraries
+### Importing libraries
 First of all we import all required python libraries for completing the task.
 
 - Script: import_libraries.py
 
-## Data Exploration
+### Data Exploration
 In this step, we explore the dataset to understand its structure and visualize some examples. This is done in the data_exploration.py script.
 
 - Script: data_exploration.py
 
-## Implement PyTorch Dataset
+### Implement PyTorch Dataset
 We implement a custom PyTorch dataset to handle data loading and preprocessing. This implementation can be found in the dataset.py script.
 
 - Script: dataset.py
 
-## Implement the U-Net
+### Implement the U-Net
 We implement the U-Net architecture as described in Ronneberger et al. The code for this is in the unet_model.py script.
 
 - Script: unet_model.py
 
-## Training
+### Training
 We define the training functions and train the model, plotting the results of loss and metrics. The training code is in the training.py script.
 
 - Script: training.py
 
-## Evaluation
+### Evaluation
 We evaluate the model on the test data to assess its performance. This evaluation is done in the evaluation.py script.
 
 - Script: evaluation.py
 
-## Training with Boundary Channel
+### Training with Boundary Channel
 To avoid merges of touching nuclei, we add a boundary channel to the learning objective and retrain the model. This process is handled in the train_with_boundary.py script.
 
 - Script: train_with_boundary.py
 
-## Training with Dice Loss
+### Training with Dice Loss
 For robustness against class imbalance, we will use the Dice coefficient as loss
 
 - Script: train_with_dice_loss.py
