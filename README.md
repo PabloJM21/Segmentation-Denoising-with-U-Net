@@ -27,6 +27,7 @@ Note that we will implement the same ideas as in these papers, but will deviate 
   - [Training](#training)
   - [Evaluation](#evaluation)
   - [Training with Boundary Channel](#training-with-boundary-channel)
+  - [Training with Dice Loss](#training-with-dice-loss)
 - [Results](#results)
 - [Acknowledgments](#acknowledgments)
 
@@ -139,7 +140,7 @@ To avoid merges of touching nuclei, we add a boundary channel to the learning ob
 
 - Script: train_with_boundary.py
 
-## Training with Boundary Channel
+## Training with Dice Loss
 For robustness against class imbalance, we will use the Dice coefficient as loss
 
 - Script: train_with_dice_loss.py
